@@ -11,6 +11,7 @@ int main(int argc, char* argv[]) {
   MPI_Comm_rank(MPI_COMM_WORLD, &rank);
   MPI_Comm_size(MPI_COMM_WORLD, &tot);
 
+  printf("The rank: %d, the size: %d\n", rank, tot);
   if(rank == 0) {
     for(i = 0; i < tot; i++) {
       sprintf(msg, "Hello %d, this is zero, I'm your master", i);
